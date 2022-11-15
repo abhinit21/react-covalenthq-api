@@ -1,22 +1,17 @@
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+
+import "./App.css";
+import Home from "./pages/Home";
+import Record from "./pages/Record";
+import Error from "./pages/Error";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route index path="/" element={<Home />} />
+      <Route path="/record/:tx_hash" element={<Record />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
 }
 
