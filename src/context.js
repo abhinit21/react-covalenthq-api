@@ -13,17 +13,17 @@ const useFetch = (urlParams) => {
 
   const fetchRecords = async (url) => {
     setIsLoading(true);
+    setrecordsList(null);
     try {
       const response = await fetch(url);
-      const data = await response.json();
+      const { data, error, error_message } = await response.json();
 
-      if (!data.error && !data) {
-        const { newData } = data;
-        setrecordsList(newData.items || newData);
+      if (!error) {
+        setrecordsList(data.items);
 
         setError({ show: false, msg: "" });
       } else {
-        setError({ show: true, msg: data.error_message });
+        setError({ show: true, msg: error_message });
       }
       setIsLoading(false);
     } catch (error) {
@@ -47,15 +47,21 @@ const useSample = () => {
 };
 
 const AppProvider = ({ children }) => {
-  const [query, setQuery] = useState("USD");
+  const [currency, setCurrency] = useState("USD");
   const { isLoading, error, recordsList } = useFetch(
-    `&quote-currency=${query}`
+    `&quote-currency=${currency}`
   );
   // const { isLoading, error, recordsList } = useSample();
 
   return (
     <AppContext.Provider
-      value={{ isLoading, error, recordsList, query, setQuery }}
+      value={{
+        isLoading,
+        error,
+        recordsList,
+        currency,
+        setCurrency,
+      }}
     >
       {children}
     </AppContext.Provider>

@@ -4,13 +4,13 @@ import { Form, InputGroup } from "react-bootstrap";
 import { useGlobalContext } from "../context";
 
 const SearchForm = () => {
-  const { setQuery } = useGlobalContext();
+  const { setCurrency } = useGlobalContext();
   const [searchQuery, setsearchQuery] = useState("USD");
 
   const searchRecords = (e) => {
     const newVal = e.target.value;
     setsearchQuery(newVal);
-    setQuery(newVal);
+    setCurrency(newVal);
   };
 
   return (
