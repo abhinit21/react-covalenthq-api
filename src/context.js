@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 
 import sample from "./assets/sample.json";
 
-export const API_ENDPOINT = `https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/address/${process.env.REACT_APP_CONTRACT_ADDRESS}/transactions/?key=${process.env.REACT_APP_COVALENTHQ_API_KEY}&format=JSON&page-size=5`;
+export const API_ENDPOINT = `https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/address/${process.env.REACT_APP_CONTRACT_ADDRESS}/transactions/?key=${process.env.REACT_APP_COVALENTHQ_API_KEY}&format=JSON`;
 
 const AppContext = React.createContext();
 
@@ -14,6 +14,7 @@ const useFetch = (urlParams) => {
   const fetchRecords = async (url) => {
     setIsLoading(true);
     setrecordsList(null);
+    console.log(url);
     try {
       const response = await fetch(url);
       const { data, error, error_message } = await response.json();
@@ -48,8 +49,9 @@ const useSample = () => {
 
 const AppProvider = ({ children }) => {
   const [currency, setCurrency] = useState("USD");
+  const [itemSize, setItemSize] = useState(5);
   const { isLoading, error, recordsList } = useFetch(
-    `&quote-currency=${currency}`
+    `&quote-currency=${currency}&page-size=${itemSize}`
   );
   // const { isLoading, error, recordsList } = useSample();
 
@@ -60,7 +62,9 @@ const AppProvider = ({ children }) => {
         error,
         recordsList,
         currency,
+        itemSize,
         setCurrency,
+        setItemSize,
       }}
     >
       {children}
