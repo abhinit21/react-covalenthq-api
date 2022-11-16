@@ -1,11 +1,12 @@
 import React from "react";
 
 import RecordsList from "../components/RecordsList";
+import SearchForm from "../components/SearchForm";
 
 const Home = () => {
   return (
     <main>
-      <h2>Search Bar</h2>
+      <SearchForm />
       <RecordsList />
     </main>
   );

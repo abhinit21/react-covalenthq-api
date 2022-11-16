@@ -48,14 +48,10 @@ const useSample = () => {
 
 const AppProvider = ({ children }) => {
   const [query, setQuery] = useState("USD");
-  // const { isLoading, error, recordsList } = useFetch(
-  //   `&quote-currency=${query}`
-  // );
-  const { isLoading, error, recordsList } = useSample();
-
-  if (!isLoading) {
-    console.log(recordsList);
-  }
+  const { isLoading, error, recordsList } = useFetch(
+    `&quote-currency=${query}`
+  );
+  // const { isLoading, error, recordsList } = useSample();
 
   return (
     <AppContext.Provider
