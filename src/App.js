@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 
-import "./App.css";
 import Home from "./pages/Home";
 import Record from "./pages/Record";
 import Error from "./pages/Error";

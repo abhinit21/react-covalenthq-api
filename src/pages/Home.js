@@ -1,14 +1,12 @@
 import React from "react";
 
+import RecordsList from "../components/RecordsList";
+
 const Home = () => {
   return (
     <main>
       <h2>Search Bar</h2>
-      <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-      </ul>
+      <RecordsList />
     </main>
   );
 };
