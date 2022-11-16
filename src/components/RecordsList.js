@@ -20,7 +20,11 @@ const RecordsList = () => {
     <ListGroup as="ol" numbered>
       {recordsList.map((record) => {
         return (
-          <LinkContainer key={record.tx_hash} to={`record/${record.tx_hash}`}>
+          <LinkContainer
+            className="my-1 rounded"
+            key={record.tx_hash}
+            to={`record/${record.tx_hash}`}
+          >
             <ListGroup.Item
               as="li"
               action

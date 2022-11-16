@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Form, InputGroup } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 
 import { useGlobalContext } from "../context";
 
@@ -25,26 +25,20 @@ const SearchForm = () => {
   return (
     <main>
       <h2>Transactions Records</h2>
-      <Container className="d-flex justify-content-between my-3">
-        <InputGroup>
-          <InputGroup.Text>Query</InputGroup.Text>
-          <Form.Control
-            value={searchQuery}
-            onChange={updateCurrency}
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
-        </InputGroup>
-        <InputGroup>
-          <InputGroup.Text>Size</InputGroup.Text>
-          <Form.Control
-            value={size}
-            onChange={updateSize}
-            aria-label="Default"
-            aria-describedby="inputGroup-sizing-default"
-          />
-        </InputGroup>
-      </Container>
+      <InputGroup className="w-25 my-2 mt-4">
+        <InputGroup.Text className="bg-primary text-white rounded">
+          Query
+        </InputGroup.Text>
+        <Form.Control
+          className="rounded"
+          value={searchQuery}
+          onChange={updateCurrency}
+        />
+        <InputGroup.Text className="ms-5 bg-primary text-white rounded">
+          Size
+        </InputGroup.Text>
+        <Form.Control className="rounded" value={size} onChange={updateSize} />
+      </InputGroup>
     </main>
   );
 };

@@ -50,6 +50,7 @@ const useSample = () => {
 const AppProvider = ({ children }) => {
   const [currency, setCurrency] = useState("USD");
   const [itemSize, setItemSize] = useState(5);
+
   const { isLoading, error, recordsList } = useFetch(
     `&quote-currency=${currency}&page-size=${itemSize}`
   );
