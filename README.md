@@ -33,8 +33,4 @@ REACT_APP_CONTRACT_ADDRESS=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can view the deployment here: [https://abhinit21.github.io/react-covalenthq-api/](https://abhinit21.github.io/react-covalenthq-api/)
