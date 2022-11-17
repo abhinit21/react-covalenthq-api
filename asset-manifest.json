@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-covalenthq-api/static/css/main.92b92794.css",
-    "main.js": "/react-covalenthq-api/static/js/main.acad4815.js",
+    "main.js": "/react-covalenthq-api/static/js/main.54548432.js",
     "index.html": "/react-covalenthq-api/index.html",
     "main.92b92794.css.map": "/react-covalenthq-api/static/css/main.92b92794.css.map",
-    "main.acad4815.js.map": "/react-covalenthq-api/static/js/main.acad4815.js.map"
+    "main.54548432.js.map": "/react-covalenthq-api/static/js/main.54548432.js.map"
   },
   "entrypoints": [
     "static/css/main.92b92794.css",
-    "static/js/main.acad4815.js"
+    "static/js/main.54548432.js"
   ]
 }
