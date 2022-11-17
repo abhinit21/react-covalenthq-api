@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { Container, Row, Col, Card, Button, ListGroup } from "react-bootstrap";
+import { Row, Col, Card, Button, ListGroup } from "react-bootstrap";
 
 import TextContainer from "../components/TextContainer";
 import { useGlobalContext } from "../context";
