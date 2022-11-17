@@ -27,7 +27,9 @@ REACT_APP_CONTRACT_ADDRESS=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
 
 ### Screenshots
 
-
+![Screenshot_20221118_010837](https://user-images.githubusercontent.com/58618233/202548265-fd219190-13f2-4f81-b812-c044df1dead8.png)
+![Screenshot_20221118_013444](https://user-images.githubusercontent.com/58618233/202548269-4b2aaefc-d1a7-415a-95d0-6d80284b220e.png)
+![Screenshot_20221118_013511](https://user-images.githubusercontent.com/58618233/202548274-92e1f798-bad1-4bfd-ae22-927110880a6a.png)
 
 ### Deployment
 
