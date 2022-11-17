@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { Row, Col, Card, Button, ListGroup } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, ListGroup } from "react-bootstrap";
 
+import TextContainer from "../components/TextContainer";
 import { useGlobalContext } from "../context";
 
 const Record = () => {
@@ -13,22 +14,32 @@ const Record = () => {
   return (
     <main>
       <Link to="/">
-        <Button variant="primary">Home</Button>
+        <Button variant="primary" className="mb-3">
+          Home
+        </Button>
       </Link>
-      <Card>
-        <ListGroup variant="flush">
-          <ListGroup.Item>{record.tx_hash}</ListGroup.Item>
-          <ListGroup.Item>{record.act}</ListGroup.Item>
-          <ListGroup.Item>{record.address}</ListGroup.Item>
-          <ListGroup.Item>{record.to_address}</ListGroup.Item>
-          <ListGroup.Item>{record.sender_address}</ListGroup.Item>
-          <ListGroup.Item>{record.total_quote}</ListGroup.Item>
-          <ListGroup.Item>{record.quote_currency}</ListGroup.Item>
-        </ListGroup>
-      </Card>
-      <Row>
+      <Row className="p-3">
         <Col>
-          <Card>
+          <Card border="light">
+            <ListGroup variant="flush">
+              <TextContainer label="tx_hash" value={record.tx_hash} />
+              <TextContainer label="act" value={record.act} />
+              <TextContainer label="address" value={record.address} />
+              <TextContainer label="to_address" value={record.to_address} />
+              <TextContainer
+                label="sender_address"
+                value={record.sender_address}
+              />
+              <TextContainer label="total_quote" value={record.total_quote} />
+              <TextContainer
+                label="quote_currency"
+                value={record.quote_currency}
+              />
+            </ListGroup>
+          </Card>
+        </Col>
+        <Col className="px-5">
+          <Card className="p-3">
             <Card.Img
               variant="top"
               className="w-25"
@@ -43,7 +54,7 @@ const Record = () => {
           </Card>
         </Col>
         <Col>
-          <Card>
+          <Card className="p-3">
             <Card.Img
               variant="top"
               className="w-25"
