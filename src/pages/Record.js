@@ -18,7 +18,18 @@ const Record = () => {
           Home
         </Button>
       </Link>
-      <Row className="p-3">
+      <Card border="light">
+        <ListGroup variant="flush">
+          <TextContainer label="tx_hash" value={record.tx_hash} />
+          {/* <TextContainer label="act" value={record.act} /> */}
+          {/* <TextContainer label="address" value={record.address} /> */}
+          <TextContainer label="to_address" value={record.to_address} />
+          <TextContainer label="sender_address" value={record.from_address} />
+          <TextContainer label="total_quote" value={record.value_quote} />
+          {/* <TextContainer label="quote_currency" value={record.quote_currency} /> */}
+        </ListGroup>
+      </Card>
+      {/* <Row className="p-3">
         <Col>
           <Card border="light">
             <ListGroup variant="flush">
@@ -68,7 +79,7 @@ const Record = () => {
             </Card.Body>
           </Card>
         </Col>
-      </Row>
+      </Row> */}
     </main>
   );
 };

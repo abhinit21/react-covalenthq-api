@@ -6,7 +6,7 @@ import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
 const RecordsList = () => {
-  const { isLoading, recordsList } = useGlobalContext();
+  const { currency, isLoading, recordsList } = useGlobalContext();
 
   if (isLoading) {
     return <Loading />;
@@ -32,9 +32,9 @@ const RecordsList = () => {
             >
               <div className="ms-2 me-auto">
                 <div className="fw-bold">{record.tx_hash}</div>
-                {record.quote_currency}
+                {currency}
               </div>
-              <Badge>{record.total_quote}</Badge>
+              <Badge>{record.value_quote}</Badge>
             </ListGroup.Item>
           </LinkContainer>
         );

@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 
 import sample from "./assets/sample.json";
 
-export const API_ENDPOINT = `https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/address/${process.env.REACT_APP_CONTRACT_ADDRESS}/transactions/?key=${process.env.REACT_APP_COVALENTHQ_API_KEY}&format=JSON`;
+// export const API_ENDPOINT = `https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/address/${process.env.REACT_APP_CONTRACT_ADDRESS}/transactions/?key=${process.env.REACT_APP_COVALENTHQ_API_KEY}`;
+export const API_ENDPOINT = `https://api.covalenthq.com/v1/1/address/0xa79E63e78Eec28741e711f89A672A4C40876Ebf3/transactions_v2/?&format=JSON&block-signed-at-asc=false&no-logs=true&page-number=3&key=ckey_74256b2121af4d1eb4edf9f5643`;
 
 const AppContext = React.createContext();
 
