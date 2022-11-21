@@ -1,9 +1,14 @@
 import React from "react";
-
-import Spinner from "react-bootstrap/Spinner";
+import { SunspotLoader } from "react-awesome-loaders";
 
 const Loading = () => {
-  return <Spinner animation="border" variant="primary" role="status" />;
+  return (
+    <SunspotLoader
+      gradientColors={["#0d6efd"]}
+      shadowColor={"#FFFFFF"}
+      size="18em"
+    />
+  );
 };
 
 export default Loading;
