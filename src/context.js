@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 
 import sample from "./assets/sample.json";
 
-export const API_ENDPOINT = `https://api.covalenthq.com/v1/1/xy=k/uniswap_v2/tokens/address/${process.env.REACT_APP_CONTRACT_ADDRESS}/transactions/?key=${process.env.REACT_APP_COVALENTHQ_API_KEY}`;
+export const API_ENDPOINT = `https://api.covalenthq.com/v1/1/address/0xa79E63e78Eec28741e711f89A672A4C40876Ebf3/transactions_v2/?key=${process.env.REACT_APP_COVALENTHQ_API_KEY}`;
 
 const AppContext = React.createContext();
 
@@ -50,9 +50,10 @@ const useSample = () => {
 const AppProvider = ({ children }) => {
   const [currency, setCurrency] = useState("USD");
   const [itemSize, setItemSize] = useState(5);
+  const [pageSize, setPageSize] = useState(1);
 
   const { isLoading, error, recordsList } = useFetch(
-    `&quote-currency=${currency}&page-size=${itemSize}`
+    `&quote-currency=${currency}&page-size=${itemSize}&page-number=${pageSize}&block-signed-at-asc=false&no-logs=true`
   );
 
   // const { isLoading, error, recordsList } = useSample();
