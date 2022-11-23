@@ -1,15 +1,17 @@
 import React from "react";
 
 import NavBar from "../components/NavBar";
-import RecordsList from "../components/RecordsList";
 import SearchForm from "../components/SearchForm";
+import RecordsList from "../components/RecordsList";
+import TableList from "../components/TableList";
 
 const Home = () => {
   return (
     <main>
       <NavBar />
       <SearchForm />
-      <RecordsList />
+      {/* <RecordsList /> */}
+      <TableList />
     </main>
   );
 };

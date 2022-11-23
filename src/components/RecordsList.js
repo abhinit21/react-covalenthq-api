@@ -13,7 +13,7 @@ const RecordsList = () => {
   }
 
   if (!recordsList) {
-    return <h2>No Records to Display</h2>;
+    return <p>No Records to Display</p>;
   }
 
   return (
