@@ -18,25 +18,27 @@ const Record = () => {
           Home
         </Button>
       </Link>
-      <Row className="p-3">
+
+      <Card border="light">
+        <ListGroup variant="flush">
+          <TextContainer label="tx_hash" value={record.tx_hash} />
+          <TextContainer label="block_height" value={record.block_height} />
+          <TextContainer
+            label="block_signed_at"
+            value={record.block_signed_at}
+          />
+          <TextContainer label="from_address" value={record.from_address} />
+          <TextContainer label="to_address" value={record.to_address} />
+          <TextContainer label="gas_offered" value={record.gas_offered} />
+          <TextContainer label="gas_price" value={record.gas_price} />
+          <TextContainer label="gas_quote" value={record.gas_quote} />
+          <TextContainer label="gas_spent" value={record.gas_spent} />
+          <TextContainer label="value_quote" value={record.value_quote} />
+        </ListGroup>
+      </Card>
+      {/* <Row className="p-3">
         <Col>
-          <Card border="light">
-            <ListGroup variant="flush">
-              <TextContainer label="tx_hash" value={record.tx_hash} />
-              <TextContainer label="act" value={record.act} />
-              <TextContainer label="address" value={record.address} />
-              <TextContainer label="to_address" value={record.to_address} />
-              <TextContainer
-                label="sender_address"
-                value={record.sender_address}
-              />
-              <TextContainer label="total_quote" value={record.total_quote} />
-              <TextContainer
-                label="quote_currency"
-                value={record.quote_currency}
-              />
-            </ListGroup>
-          </Card>
+
         </Col>
         <Col className="px-5">
           <Card className="p-3">
@@ -68,7 +70,7 @@ const Record = () => {
             </Card.Body>
           </Card>
         </Col>
-      </Row>
+      </Row> */}
     </main>
   );
 };
