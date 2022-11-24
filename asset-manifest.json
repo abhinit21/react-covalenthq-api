@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-covalenthq-api/static/css/main.92b92794.css",
-    "main.js": "/react-covalenthq-api/static/js/main.b7667e08.js",
+    "main.js": "/react-covalenthq-api/static/js/main.e7b1b65c.js",
     "index.html": "/react-covalenthq-api/index.html",
     "main.92b92794.css.map": "/react-covalenthq-api/static/css/main.92b92794.css.map",
-    "main.b7667e08.js.map": "/react-covalenthq-api/static/js/main.b7667e08.js.map"
+    "main.e7b1b65c.js.map": "/react-covalenthq-api/static/js/main.e7b1b65c.js.map"
   },
   "entrypoints": [
     "static/css/main.92b92794.css",
-    "static/js/main.b7667e08.js"
+    "static/js/main.e7b1b65c.js"
   ]
 }
