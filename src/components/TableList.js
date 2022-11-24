@@ -13,6 +13,10 @@ function TableList() {
     return <Loading />;
   }
 
+  if (!recordsList) {
+    return <p>No Records to display.</p>;
+  }
+
   return (
     <Table responsive>
       <thead>
