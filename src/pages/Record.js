@@ -36,10 +36,8 @@ const Record = () => {
           <TextContainer label="value_quote" value={record.value_quote} />
         </ListGroup>
       </Card>
-      {/* <Row className="p-3">
-        <Col>
-
-        </Col>
+      <Row className="p-3">
+        <Col></Col>
         <Col className="px-5">
           <Card className="p-3">
             <Card.Img
@@ -70,7 +68,7 @@ const Record = () => {
             </Card.Body>
           </Card>
         </Col>
-      </Row> */}
+      </Row>
     </main>
   );
 };

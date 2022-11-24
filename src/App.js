@@ -12,7 +12,7 @@ function App() {
       <Route index path="/" element={<Home />} />
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/requested" element={<Requested/>}/>
-      <Route path="/record/:tx_hash" element={<Record />} />
+      <Route path="/requested/record/:tx_hash" element={<Record />} />
       <Route path="*" element={<Error />} />
       
     </Routes>
