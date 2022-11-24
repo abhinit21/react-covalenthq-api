@@ -7,7 +7,10 @@ import TableList from "../components/TableList";
 
 const Requested = () => {
   return (
-    <h1>Hello this is ClassB Page</h1>
+    <main>
+      <NavBar />
+      <RecordsList />
+    </main>
   );
 };
 
